@@ -1,0 +1,197 @@
+yout
+
+block content
+  body
+    script.
+
+      // LOAD DATA
+      var StgCompanies =  [];
+      var StgCompanies = !{JSON.stringify(companies)};
+
+
+
+  .top-bar
+    .row
+      .top-bar-left
+        ul.dropdown.menu(data-dropdown-menu='')
+          li.menu-text Advocaten
+          li.has-submenu
+            a(href='#') One
+            ul.submenu.menu.vertical(data-submenu='')
+              li
+                a(href='#') One
+              li
+                a(href='#') Two
+              li
+                a(href='#') Three
+          li
+            a(href='#') Two
+          li
+            a(href='#') Three
+      .top-bar-right
+        ul.menu
+          li
+            input(type='search', placeholder='Search')
+          li
+            button.button(type='button') Search
+  br
+  .row.columns
+    nav(aria-label='You are here:', role='navigation')
+      ul.breadcrumbs
+        li
+          a(href='#') Home
+        li
+          a(href='#') Features
+        li.disabled Gene Splicing
+        li
+          span.show-for-sr Current:
+          |  Cloning
+  .row
+    hr
+    ul#example-tabs.tabs(data-tabs='')
+      li.tabs-title.is-active
+        a(href='#panel1', aria-selected='true') Reviews
+      li.tabs-title
+        a(href='#panel2') Similar Products
+    .tabs-content(data-tabs-content='example-tabs')
+      #panel1.tabs-panel.is-active
+        h4
+          script.
+
+              StgCompanies.forEach(function (a) {
+                  console.info(a)
+
+                  $('h4').append('<div id="myCompanyBlock" class="media-object stack-for-small">' +
+                                    '<div class="media-object-section">' +
+                                       '<img src="http://placehold.it/200x200" class="thumbnail">' +
+                                          '</div>' +
+                                            '<div class="media-object-section">' +
+                                                '<h5>'+  a.naam  +'</h5>' +
+                                                '<div id=labelContent class="labelContent">' +
+                                             // Labels
+                                                '<div id="label" class="label">' +
+                                                '<p class="myLabels">Adres:</p>' +
+                                                '<p class="myLabels">Plaats:</p>' +
+                                                '<p class="myLabels">Postcode:</p></div>' +
+                                            // Content
+                                             '<div id="content"class="content"> ' +
+                                                '<p class="myContext"> ' +  a.adres + '</p>' +
+                                                '<p class="myContext"> ' +  a.plaats + '</p>' +
+                                                '<p class="myContext"> ' +  a.postcode + '</p>' +
+                                             '</div>'+
+                                            // Domeinen
+                                            '<div id="content"class="Domeinen"> ' +
+                                              '<p class="domeinContext"></p>' +
+                                              '</div>' +
+                                             '</div>'+
+                                            '</div></div>')
+
+              });
+
+              $('.myLabels').css({
+                  'font-family': 'Helvetica Neue, Helvetica, Roboto, Arial, sans-serif'
+                  , 'font-size': '14px'
+                  , 'font-weight': 'bold'
+              })
+
+              $('.myContext').css({
+                  'font-family': 'Helvetica Neue, Helvetica, Roboto, Arial, sans-serif'
+                  , 'font-size': '14px'
+                  , 'color': '#0a0a0a'
+              })
+
+              $('.label').css({"float": "left"
+                               ,"background-color": "#fefefe"
+                               , 'color': '#0a0a0a'})
+
+              $('.content').css({
+                  "width": "120px"
+                  , "height": "120px"
+                  , "overflow": "hidden"
+                  , "float": "left"
+              })
+
+        .media-object.stack-for-small
+          .media-object-section
+            img.thumbnail(src='http://placehold.it/200x200')
+          .media-object-section
+            h5 Mike Stevenson
+            p
+              | I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.
+        .media-object.stack-for-small
+          .media-object-section
+            img.thumbnail(src='http://placehold.it/200x200')
+          .media-object-section
+            h5 Mike Stevenson
+            p
+              | I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you
+        .media-object.stack-for-small
+          .media-object-section
+            img.thumbnail(src='http://placehold.it/200x200')
+          .media-object-section
+            h5 Mike Stevenson
+            p
+              | I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you
+        label
+          | My Review
+          textarea(placeholder='None')
+        button.button Submit Review
+      #panel2.tabs-panel
+        .row.medium-up-3.large-up-5
+          .column
+            img.thumbnail(src='http://placehold.it/350x200')
+            h5
+              | Other Product
+              small $22
+            p
+              | In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.
+            a.button.hollow.tiny.expanded(href='#') Buy Now
+          .column
+            img.thumbnail(src='http://placehold.it/350x200')
+            h5
+              | Other Product
+              small $22
+            p
+              | In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.
+            a.button.hollow.tiny.expanded(href='#') Buy Now
+          .column
+            img.thumbnail(src='http://placehold.it/350x200')
+            h5
+              | Other Product
+              small $22
+            p
+              | In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.
+            a.button.hollow.tiny.expanded(href='#') Buy Now
+          .column
+            img.thumbnail(src='http://placehold.it/350x200')
+            h5
+              | Other Product
+              small $22
+            p
+              | In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.
+            a.button.hollow.tiny.expanded(href='#') Buy Now
+          .column
+            img.thumbnail(src='http://placehold.it/350x200')
+            h5
+              | Other Product
+              small $22
+            p
+              | In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.
+            a.button.hollow.tiny.expanded(href='#') Buy Now
+  .row.column
+    hr
+    ul.menu
+      li Advocaten
+      li
+        a(href='#') Home
+      li
+        a(href='#') About
+      li
+        a(href='#') Contact
+      li.float-right Copyright 2016
+  script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+  script(src='http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js')
+  script.
+      $(document).foundation();
+  script(type='text/javascript', src='https://intercom.zurb.com/scripts/zcom.js')
+
